@@ -1,5 +1,29 @@
 import React from 'react';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+
+function NavBar() {
+return (
+    <Container>
+    <UnorderedList>
+        <ListItem> <a href=''>About</a> </ListItem>
+        <ListItem> <a href=''>Resume</a> </ListItem>
+        <ListItem> <a href=''>Experience</a> </ListItem>
+        <ListItem> <a href=''>More</a> </ListItem>
+    </UnorderedList>
+  </Container>
+)
+}
+
+export default NavBar;
+
+const Container = styled.div`
+    box-sizing: border-box;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 6%;
+    left: 50%;
+`
 
 const UnorderedList = styled.ul`
     list-style-type: none;
@@ -34,7 +58,7 @@ const ListItem = styled.li`
         text-decoration: none;
         padding: 0px 45px;
         font-family: verdana;
-        font-weight: lighter;
+        font-weight: 600;
         font-size: 24px;
         letter-spacing: 1px;
         opacity: 0.9;
@@ -42,9 +66,9 @@ const ListItem = styled.li`
 
     a:hover {
         color: #fff;
-        animation: 1.5s myFlash linear infinite;
+        animation: 2s myFlash linear infinite;
         text-shadow: 2px 2px 30px #fff;
-        transition: 2s;
+        transition: 3s;
     }
     
 
@@ -64,27 +88,3 @@ const ListItem = styled.li`
         }
       }
 `
-
-const Container = styled.div`
-    box-sizing: border-box;
-    margin: 0;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 6%;
-    left: 50%;
-`
-
-function NavBar() {
-return (
-    <Container>
-    <UnorderedList>
-        <ListItem> <a href=''>About</a> </ListItem>
-        <ListItem> <a href=''> Resume</a> </ListItem>
-        <ListItem> <a href=''>Experience</a> </ListItem>
-        <ListItem> <a href=''>More</a> </ListItem>
-    </UnorderedList>
-  </Container>
-)
-}
-
-export default NavBar;
